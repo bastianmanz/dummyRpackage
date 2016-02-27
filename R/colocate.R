@@ -1,8 +1,19 @@
-## function to colocate gauges with corresponding GPM pixel
-
-## Author: Bastian Manz, Imperial College London
-## Date: 01/02/2016
-## Use: open-source and open-access (free)
+#' Function to colocate gauges with corresponding GPM pixel
+#' 
+#' @description xxx
+#' 
+#' @param gauges A STFDF object.
+#' @param gpm a STFDF object.
+#' @param resolution An integer describing the satellite spatial resolution.
+#' @param longlat A logical object indicating if object is in long/lat or not. TRUE by default.
+#' 
+#' @details specifics of calculation (uses spdistsn1)
+#' 
+#' @return Object \code{gauges} with additional spatial column indicating GPM pixel ID.
+#' 
+#' @examples
+#' #add(1, 1)
+#' #add(10, 1)
 
 colocate <- function(gauges, gpm, resolution,longlat=TRUE){
   
